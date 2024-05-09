@@ -8,12 +8,24 @@ function addToDispaly(input) {
   var output = display.value;
   var lastInputOperator = operator(output[output.length - 1]);
 
-  if (operator(input)) {
-    if (!lastInputOperator && output != "") {
+  if (output != "Error" && output != "Infinity") {
+    if (operator(input)) {
+      if (
+        !lastInputOperator &&
+        output != "" &&
+        output[output.length - 1] != "."
+      ) {
+        display.value += input;
+      }
+    } else if (input == ".") {
+      if (output == "") {
+        display.value = display.value + 0 + input;
+      } else if (output[output.length - 1] == "." || !lastInputOperator) {
+        display.value = output;
+      }
+    } else {
       display.value += input;
     }
-  } else {
-    display.value += input;
   }
 }
 
