@@ -1,7 +1,7 @@
 const display = document.getElementById("result-display");
 
 function operator(input) {
-  return ["/", "*", "+"].includes(input);
+  return ["/", "*", "-", "+"].includes(input);
 }
 
 function addToDispaly(input) {
@@ -10,7 +10,7 @@ function addToDispaly(input) {
 
   if (output != "Error" && output != "Infinity") {
     if (operator(input)) {
-      if (!lastInputOperator && output != "") {
+      if ((!lastInputOperator && output != "") || (output == "" && input == "-")){
         display.value += input;
       }
     } else if (input == ".") {
