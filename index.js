@@ -12,16 +12,18 @@ function addToDispaly(input) {
     if (operator(input)) {
       if (
         !lastInputOperator &&
-        output != "" &&
-        output[output.length - 1] != "."
+        output != ""
       ) {
         display.value += input;
       }
     } else if (input == ".") {
       if (output == "") {
         display.value = display.value + 0 + input;
-      } else if (output[output.length - 1] == "." || !lastInputOperator) {
+      } else if (output[output.length - 1] == ".") {
         display.value = output;
+      }
+      else {
+        display.value += input;
       }
     } else {
       display.value += input;
