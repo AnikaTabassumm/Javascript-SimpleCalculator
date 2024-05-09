@@ -22,11 +22,11 @@ function addToDispaly(input) {
         display.value += input;
       }
     } else {
-      if (output == 0) {
+      /*if (output == 0) {
         display.value = input;
-      } else {
+      } else {*/
         display.value += input;
-      }
+    //  }
     }
   }
 }
