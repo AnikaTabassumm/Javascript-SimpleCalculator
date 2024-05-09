@@ -1,7 +1,7 @@
 const display = document.getElementById("result-display");
 
 function operator(input) {
-  return ["/", "*", "-", "+"].includes(input);
+  return ["/", "*", "+"].includes(input);
 }
 
 function addToDispaly(input) {
