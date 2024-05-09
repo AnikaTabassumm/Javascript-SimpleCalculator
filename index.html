@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-body">
+        <input id="result-display" readonly />
+        <div class="buttons">
+          <div class="button-row">
+            <button class="btn btnType1" onclick="clearDisplay()">AC</button>
+            <button class="btn btnType1" onclick="del()">Del</button>
+            <button class="btn btnType2" onclick="addToDispaly('.')">.</button>
+            <button class="btn btnType2" onclick="addToDispaly('/')">/</button>
+          </div>
+          <div class="button-row">
+            <button class="btn btnType3" onclick="addToDispaly('7')">7</button>
+            <button class="btn btnType3" onclick="addToDispaly('8')">8</button>
+            <button class="btn btnType3" onclick="addToDispaly('9')">9</button>
+            <button class="btn btnType2" onclick="addToDispaly('*')">*</button>
+          </div>
+          <div class="button-row">
+            <button class="btn btnType3" onclick="addToDispaly('4')">4</button>
+            <button class="btn btnType3" onclick="addToDispaly('5')">5</button>
+            <button class="btn btnType3" onclick="addToDispaly('6')">6</button>
+            <button class="btn btnType2" onclick="addToDispaly('-')">-</button>
+          </div>
+          <div class="button-row">
+            <button class="btn btnType3" onclick="addToDispaly('1')">1</button>
+            <button class="btn btnType3" onclick="addToDispaly('2')">2</button>
+            <button class="btn btnType3" onclick="addToDispaly('3')">3</button>
+            <button class="btn btnType2" onclick="addToDispaly('+')">+</button>
+          </div>
+          <div class="button-row">
+            <button class="btn btnType4" onclick="addToDispaly('00')">
+              00
+            </button>
+            <button class="btn btnType4" onclick="addToDispaly('0')">0</button>
+            <button class="btnEqual" onclick="calculate()">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
