@@ -10,7 +10,10 @@ function addToDispaly(input) {
 
   if (output != "Error" && output != "Infinity") {
     if (operator(input)) {
-      if ((!lastInputOperator && output != "") || (output == "" && input == "-")){
+      if (
+        (!lastInputOperator && output != "") ||
+        (output == "" && input == "-")
+      ) {
         display.value += input;
       }
     } else if (input == ".") {
@@ -22,11 +25,7 @@ function addToDispaly(input) {
         display.value += input;
       }
     } else {
-      /*if (output == 0) {
-        display.value = input;
-      } else {*/
-        display.value += input;
-    //  }
+      display.value += input;
     }
   }
 }
